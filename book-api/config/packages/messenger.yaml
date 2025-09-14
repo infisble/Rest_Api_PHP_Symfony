@@ -1,0 +1,11 @@
+framework:
+  messenger:
+    transports:
+      async: 'doctrine://default'
+    routing:
+      App\Message\CreateAuthor: async
+      App\Message\UpdateAuthor: async
+      App\Message\DeleteAuthor: async
+      App\Message\CreateBook:   async
+      App\Message\UpdateBook:   async
+      App\Message\DeleteBook:   async
