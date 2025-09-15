@@ -22,8 +22,8 @@ REST API на Symfony (6.4) + SQLite:
 ```bash
 composer install
 ```
-# убедись, что в .env:
-# DATABASE_URL="sqlite:///%kernel.project_dir%/var/data.db"
+убедись, что в .env:
+DATABASE_URL="sqlite:///%kernel.project_dir%/var/data.db"
 ```bash
 php bin/console doctrine:schema:validate
 ```
@@ -31,7 +31,7 @@ php bin/console doctrine:schema:validate
 ```bash
 php bin/console make:migration
 ```
-## OR
+ OR
 ```bash
 php bin/console doctrine:migrations:migrate -n
 ```
