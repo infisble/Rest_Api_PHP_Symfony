@@ -84,7 +84,8 @@ Body → raw JSON:
 ```
 
 ## Получить всех авторов
-GET ```bash 
+GET 
+```bash 
 http://127.0.0.1:8000/api/authors
 ```
 📌 Ответ: 200 OK
@@ -102,7 +103,8 @@ http://127.0.0.1:8000/api/authors/1
 
 ## Удалить автора
 
-DELETE ```bash 
+DELETE
+```bash 
 http://127.0.0.1:8000/api/authors/1
 ``` 
 📌 Ответ: 202 Accepted
@@ -110,7 +112,8 @@ http://127.0.0.1:8000/api/authors/1
 🔹 Book
 1. Создать книгу
 
-POST  ```bash
+POST 
+```bash
 http://127.0.0.1:8000/api/books
 ```
 body raw 
@@ -127,14 +130,16 @@ body raw
 
 ## Получить все книги
 
-GET ```bash 
+GET 
+```bash 
 http://127.0.0.1:8000/api/books
 ```
 📌 Ответ: 200 OK
 
 ## Обновить книгу
 
-PUT ```bash
+PUT
+```bash
 http://127.0.0.1:8000/api/books/1
  ```
 
@@ -149,7 +154,8 @@ http://127.0.0.1:8000/api/books/1
 
 ## Удалить книгу
 
-DELETE ```bash 
+DELETE 
+```bash 
 http://127.0.0.1:8000/api/books/1
 ```
 📌 Ответ: 202 Accepted
