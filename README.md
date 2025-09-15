@@ -31,7 +31,7 @@ php bin/console doctrine:schema:validate
 ```bash
 php bin/console make:migration
 ```
-# OR
+## OR
 ```bash
 php bin/console doctrine:migrations:migrate -n
 ```
