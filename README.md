@@ -84,60 +84,59 @@ Body → raw JSON:
 ```
 
 ## Получить всех авторов
-GET ```bash http://127.0.0.1:8000/api/authors  ```
+GET ```bash 
+http://127.0.0.1:8000/api/authors
+```
 📌 Ответ: 200 OK
 
-[
-  { "id": 1, "name": "Isaac Asimov" },
-  { "id": 2, "name": "Arthur C. Clarke" }
-]
 
 ## Обновить автора
 
 PUT
-```bash http://127.0.0.1:8000/api/authors/1  ```
-
-{ "name": "Isaac Asimov (updated)" }
+```bash
+http://127.0.0.1:8000/api/authors/1
+ ```
 
 
 📌 Ответ: 202 Accepted
 
 ## Удалить автора
 
-DELETE ```bash http://127.0.0.1:8000/api/authors/1 ``` 
+DELETE ```bash 
+http://127.0.0.1:8000/api/authors/1
+``` 
 📌 Ответ: 202 Accepted
 
 🔹 Book
 1. Создать книгу
 
-POST  ```bash http://127.0.0.1:8000/api/books ```
-
+POST  ```bash
+http://127.0.0.1:8000/api/books
+```
+body raw 
+```bash
 {
   "title": "Foundation",
   "description": "Classic sci-fi novel",
   "authorIds": [1]
 }
+```
 
 
 📌 Ответ: 202 Accepted
 
-2. Получить все книги
+## Получить все книги
 
-GET ```bash  http://127.0.0.1:8000/api/books ```
+GET ```bash 
+http://127.0.0.1:8000/api/books
+```
 📌 Ответ: 200 OK
 
-[
-  {
-    "id": 1,
-    "title": "Foundation",
-    "description": "Classic sci-fi novel",
-    "authors": [{ "id": 1, "name": "Isaac Asimov" }]
-  }
-]
+## Обновить книгу
 
-3. Обновить книгу
-
-PUT ```bash  http://127.0.0.1:8000/api/books/1 ```
+PUT ```bash
+http://127.0.0.1:8000/api/books/1
+ ```
 
 {
   "title": "Foundation (updated)",
@@ -148,11 +147,12 @@ PUT ```bash  http://127.0.0.1:8000/api/books/1 ```
 
 📌 Ответ: 202 Accepted
 
-4. Удалить книгу
+## Удалить книгу
 
-DELETE ```bash http://127.0.0.1:8000/api/books/1 ```
+DELETE ```bash 
+http://127.0.0.1:8000/api/books/1
+```
 📌 Ответ: 202 Accepted
 
 
-{ "status": "accepted" }
 
