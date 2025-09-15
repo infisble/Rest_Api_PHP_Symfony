@@ -68,7 +68,13 @@ php -S 127.0.0.1:8000 -t public
 ---
 
 # 🧪 Тестирование API (Postman)
-Создание автора
+Наше API поддерживает все CRUD операции:  
+- `POST` — создание  
+- `GET` — получение списка или одного объекта  
+- `PUT` — обновление  
+- `DELETE` — удаление
+- 
+## Создание автора
 ```bash
 POST http://127.0.0.1:8000/api/authors
 ```
@@ -77,7 +83,76 @@ Body → raw JSON:
 { "name": "Test" }
 ```
 
-Ожидаемый ответ:
+## Получить всех авторов
+GET ```bash http://127.0.0.1:8000/api/authors  ```
+📌 Ответ: 200 OK
+
+[
+  { "id": 1, "name": "Isaac Asimov" },
+  { "id": 2, "name": "Arthur C. Clarke" }
+]
+
+## Обновить автора
+
+PUT
+```bash http://127.0.0.1:8000/api/authors/1  ```
+
+{ "name": "Isaac Asimov (updated)" }
+
+
+📌 Ответ: 202 Accepted
+
+## Удалить автора
+
+DELETE ```bash http://127.0.0.1:8000/api/authors/1 ``` 
+📌 Ответ: 202 Accepted
+
+🔹 Book
+1. Создать книгу
+
+POST  ```bash http://127.0.0.1:8000/api/books ```
+
+{
+  "title": "Foundation",
+  "description": "Classic sci-fi novel",
+  "authorIds": [1]
+}
+
+
+📌 Ответ: 202 Accepted
+
+2. Получить все книги
+
+GET ```bash  http://127.0.0.1:8000/api/books ```
+📌 Ответ: 200 OK
+
+[
+  {
+    "id": 1,
+    "title": "Foundation",
+    "description": "Classic sci-fi novel",
+    "authors": [{ "id": 1, "name": "Isaac Asimov" }]
+  }
+]
+
+3. Обновить книгу
+
+PUT ```bash  http://127.0.0.1:8000/api/books/1 ```
+
+{
+  "title": "Foundation (updated)",
+  "description": "Updated description",
+  "authorIds": [1, 2]
+}
+
+
+📌 Ответ: 202 Accepted
+
+4. Удалить книгу
+
+DELETE ```bash http://127.0.0.1:8000/api/books/1 ```
+📌 Ответ: 202 Accepted
+
 
 { "status": "accepted" }
 
