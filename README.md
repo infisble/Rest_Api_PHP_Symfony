@@ -31,6 +31,7 @@ book-api/
 ├── composer.json
 ├── composer.lock
 └── README.md
+```
 ---
 
 ##  Требования
