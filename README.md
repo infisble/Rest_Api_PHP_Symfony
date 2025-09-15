@@ -9,6 +9,35 @@ REST API на Symfony (6.4) + SQLite:
 
 ---
 
+## 📂 Структура проекта
+
+```text
+book-api/
+├── config/              # конфигурация Symfony
+├── docs/
+│   └── img/             # сюда складываем скриншоты для README
+│       ├── postman-create-author.png
+│       ├── worker-handle.png
+│       └── messenger-consume.png
+├── migrations/          # файлы миграций Doctrine
+├── public/              # публичная директория (index.php)
+├── src/
+│   ├── Controller/      # контроллеры REST API
+│   ├── Entity/          # сущности (Author, Book)
+│   ├── Message/         # сообщения (Create, Update, Delete)
+│   ├── MessageHandler/  # обработчики сообщений
+│   ├── Repository/      # репозитории Doctrine
+│   └── Kernel.php
+├── var/                 # кэш, логи, SQLite база
+├── vendor/              # зависимости Composer
+├── .env                 # настройки окружения
+├── .env.example         # пример env для GitHub
+├── .gitignore           # игнорируемые файлы
+├── composer.json
+├── composer.lock
+└── README.md
+---
+
 ##  Требования
 - PHP ≥ 8.1 (CLI) c расширениями: `pdo_sqlite`, `sqlite3`
 - Composer
