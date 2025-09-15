@@ -30,6 +30,9 @@ php bin/console doctrine:schema:validate
 # если сущности новые:
 ```bash
 php bin/console make:migration
+```
+# OR
+```bash
 php bin/console doctrine:migrations:migrate -n
 ```
 # сервер разработки
