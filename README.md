@@ -1,4 +1,4 @@
-# 📚 Book API (Symfony 6.4 + SQLite + Messenger)
+#  Book API (Symfony 6.4 + SQLite + Messenger)
 
 REST API на Symfony (6.4) + SQLite:
 - Сущности: **Author**, **Book** (Many-to-Many)
@@ -9,7 +9,7 @@ REST API на Symfony (6.4) + SQLite:
 
 ---
 
-## ⚙️ Требования
+##  Требования
 - PHP ≥ 8.1 (CLI) c расширениями: `pdo_sqlite`, `sqlite3`
 - Composer
 - SQLite (входит в PHP)
@@ -17,7 +17,7 @@ REST API на Symfony (6.4) + SQLite:
 
 ---
 
-## 🚀 Локальный запуск
+##  Локальный запуск
 ```bash
 # из корня проекта
 composer install
