@@ -18,18 +18,21 @@ REST API на Symfony (6.4) + SQLite:
 ---
 
 ##  Локальный запуск
-```bash
 # из корня проекта
+```bash
 composer install
-
+```
 # убедись, что в .env:
 # DATABASE_URL="sqlite:///%kernel.project_dir%/var/data.db"
-
+```bash
 php bin/console doctrine:schema:validate
-
+```
 # если сущности новые:
+```bash
 php bin/console make:migration
 php bin/console doctrine:migrations:migrate -n
-
+```
 # сервер разработки
+```bash
 php -S 127.0.0.1:8000 -t public
+```
