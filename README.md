@@ -14,11 +14,6 @@ REST API на Symfony (6.4) + SQLite:
 ```text
 book-api/
 ├── config/              # конфигурация Symfony
-├── docs/
-│   └── img/             # сюда складываем скриншоты для README
-│       ├── postman-create-author.png
-│       ├── worker-handle.png
-│       └── messenger-consume.png
 ├── migrations/          # файлы миграций Doctrine
 ├── public/              # публичная директория (index.php)
 ├── src/
