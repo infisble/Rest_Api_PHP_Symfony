@@ -60,6 +60,20 @@ php bin/console make:migration
 ```bash
 php bin/console doctrine:migrations:migrate -n
 ```
+
+# 🧪 Тестирование API (Postman)
+Создание автора
+```bash
+POST http://127.0.0.1:8000/api/authors
+```
+Body → raw JSON:
+```bash
+{ "name": "Test" }
+```
+
+Ожидаемый ответ:
+
+{ "status": "accepted" }
 # сервер разработки
 ```bash
 php -S 127.0.0.1:8000 -t public
